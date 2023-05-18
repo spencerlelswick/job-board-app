@@ -1,7 +1,15 @@
 import './App.css'
+import Landing from './pages/Landing'
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
 
 function App() {
-  return <>base app init</>
+  return (
+    <Router>
+      <Routes>
+        <Route to='/' element={<Landing />}></Route>
+      </Routes>
+    </Router>
+  )
 }
 
 export default App
