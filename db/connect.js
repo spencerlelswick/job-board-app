@@ -1,9 +1,6 @@
 import mongoose from 'mongoose'
-import dotenv from 'dotenv'
-dotenv.config()
 
-const url = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@${process.env.MONGO_DB_INFO}?retryWrites=true&w=majority`
-const connectDB = () => {
+const connectDB = (url) => {
   return mongoose.connect(url)
 }
 
