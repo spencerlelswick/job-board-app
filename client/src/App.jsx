@@ -1,13 +1,21 @@
 import './App.css'
 import { Landing, Dashboard, Error, Register } from './pages'
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
+import {
+  AddJob,
+  AllJobs,
+  Profile,
+  SharedLayout,
+  Stats,
+} from './pages/dashboard'
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/' element={<Dashboard />}></Route>
+        <Route path='/' element={<div>dashboard</div>}></Route>
         <Route path='/register' element={<Register />}></Route>
+        <Route path='/landing' element={<Landing />}></Route>
         <Route path='/landing' element={<Landing />}></Route>
         <Route path='*' element={<Error />}></Route>
       </Routes>
