@@ -7,7 +7,11 @@ import {
   LOGIN_USER_BEGIN,
   LOGIN_USER_ERROR,
   LOGIN_USER_SUCCESS,
+  TOGGLE_SIDEBAR,
+  LOGOUT_USER,
 } from './actions'
+
+import { initialState } from './appContext'
 
 const reducer = (state, action) => {
   if (action.type === CLEAR_ALERT) {
@@ -84,6 +88,22 @@ const reducer = (state, action) => {
       showAlert: true,
       alertType: 'danger',
       alertText: 'Failed to Login',
+    }
+  }
+
+  if (action.type === TOGGLE_SIDEBAR) {
+    return {
+      ...state,
+      showSidebar: !state.showSidebar,
+    }
+  }
+
+  if (action.type === LOGOUT_USER) {
+    return {
+      ...initialState,
+      user: '',
+      userLocation: '',
+      jobLocation: '',
     }
   }
 

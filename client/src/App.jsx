@@ -23,7 +23,7 @@ function App() {
         >
           <Route index element={<Stats />}></Route>
           <Route path='all-jobs' element={<AllJobs />}></Route>
-          <Route path='add-jobs' element={<AddJob />}></Route>
+          <Route path='add-job' element={<AddJob />}></Route>
           <Route path='profile' element={<Profile />}></Route>
         </Route>
         <Route path='/register' element={<Register />}></Route>
