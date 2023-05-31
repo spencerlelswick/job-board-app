@@ -37,8 +37,6 @@ const Register = () => {
 
     const currentUser = { name, email, password }
     if (isMember) {
-      console.log(currentUser)
-
       loginUser(currentUser)
     } else {
       registerUser(currentUser)
